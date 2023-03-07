@@ -1,3 +1,14 @@
+library("dplyr")
+library("ggplot2")
+library("plotly")
+library("tidyverse")
+library("markdown")
+
+# Load data
+deaths <- read.csv("us-deaths.csv", stringsAsFactors = FALSE)
+
+View(deaths)
+
 server <- function(input, output) {
   
   output$distPlot <- renderPlot({
