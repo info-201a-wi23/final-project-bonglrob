@@ -46,7 +46,7 @@ viz_death_rates_tab <- tabPanel(
           max = 2017,
           value = 2017
         )
-      )
+      ),
       mainPanel(
         plotlyOutput("line_plot")
       )
