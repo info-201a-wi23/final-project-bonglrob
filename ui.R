@@ -92,7 +92,7 @@ viz_death_categories_tab <- tabPanel(
     ),
     mainPanel(
       plotlyOutput("bargraph_plot"),
-      h1("About this Bar Chart"),
+      h1("About this Bar Chart:"),
       p("This Visualization displays a bar chart of the top ten leading causes of death in the united states depending on the year chosen from the given range between 1999 and 2017. The purpose of this bar chart is to show the changes in the number of deaths for each cause throughout the years."),
       h1("Key Insights"),
       p("Over the years, we can see how heart disease continues to be the leading cause of death, followed by cancer. But, we can also see how the other causes slowly increase their number of deaths."),
