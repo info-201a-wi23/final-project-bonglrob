@@ -1,4 +1,6 @@
- ## Introduction
+![heart](https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+## Introduction
 
 What major questions are you seeking to answer? 
 
@@ -25,5 +27,3 @@ How are populations that are excluded from this data (e.g. undocumented peoples)
   The death rate is also not an accurate predictor of the number of deaths because it's based on the US Census. Between 1999 and 2010, the 2000 US Census is used to calculate the death rate. After 2010, the 2010 US Census is used instead. The US Census is conducted once every decade, so the data collected will also not be representative of the US population. This runs into the same problem as relying on death certificates for information. As a result, this creates a feedback loop where inaccurate data will be used to compile statistics that will have a big margin of error.
 
   Another problem with the dataset is that data collected from the death certificate will be based on the main underlying cause of death determined by the practicing medical examiner. Inaccurate diagnosies can make their way into the data and mask the true cause of death. This could lead to conclusions where some deaths are ocurring more than others.
-
-![heart]("heart.jpg")
