@@ -42,8 +42,10 @@ viz_map_tab <- tabPanel(
       ),
     mainPanel(
       plotlyOutput("map_plot"),
-      h1("About this Chart:"),
-      p("Key Insights")
+      h1("About this Map:"),
+      p("This visualization shows a map of the United States and the leading cause of death for each state of that particular year. Leading cause of death is calculated by most deaths for a disease in the year."),
+      h2("Key Insights"),
+      p("At a first glance, heart disease and cancer are the main causes of death as other causes of death cannot top the number of cases these 2 have. Dominantly, heart disease tops the chart. Washington state consistently has their main cause of death be cancer. One possible reason for this is that due to Fred Hutchinson Cancer Research Center being located there.")
     )
   )
 ))
