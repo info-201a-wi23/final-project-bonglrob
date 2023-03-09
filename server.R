@@ -18,7 +18,7 @@ server <- function(input, output) {
     deaths_state_data <- deaths %>%
       mutate(state_name = tolower(State)) %>%
       filter(state_name != "united states") %>%
-      filter(Year == input$year) %>% # Change to dynamic input/output
+      filter(Year == input$year) %>%
       group_by(state_name) %>%
       filter(Cause.Name != "All causes") %>%
       filter(Deaths == max(Deaths, na.rm = TRUE)) %>%
@@ -50,7 +50,7 @@ server <- function(input, output) {
       scale_fill_brewer(palette = "Reds") +
       coord_map() +
       labs(
-        title = "Leading Cause of Death in US in 2017",
+        title = paste("Leading Cause of Death per State in", input$year) ,
         fill = "Cause") +
       blank_theme
     
@@ -61,7 +61,7 @@ server <- function(input, output) {
   output$line_plot <- renderPlotly({
     
     death_rates_2017 <- deaths %>%
-      filter(Year == 2017) %>%
+      filter(Year == input$range) %>%
       filter(State == "United States") %>%
       filter(Cause.Name != "All causes") %>% 
       select(Cause.Name, Age.adjusted.Death.Rate)
