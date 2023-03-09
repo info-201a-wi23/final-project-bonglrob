@@ -9,6 +9,15 @@ intro_tab <- tabPanel(
   )
 )
 
+year_slider <- sliderInput(
+  inputId = "range",
+  label = "Years",
+  min = 1999,
+  max = 2017,
+  value = 2000
+)
+
+
 viz_map_tab <- tabPanel(
   "Map",
   fluidPage(
@@ -40,11 +49,11 @@ viz_death_rates_tab <- tabPanel(
     sidebarLayout(
       sidebarPanel(
         sliderInput(
-          inputId = "range",
+          inputId = "obs",
           label = "Years",
           min = 1999,
           max = 2017,
-          value = 2017
+          value = 2010
         )
       ),
       mainPanel(
