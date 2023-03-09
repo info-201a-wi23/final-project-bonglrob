@@ -73,9 +73,28 @@ viz_death_rates_tab <- tabPanel(
         p("We are able to see from the line graphs that each of the three leading causes fluctuate throughout the years. In a broader sense, it is less difficult to compare whether or not one leading cause affects the United States population more than another leading cause."),
       )
     )
+))
+viz_death_categories_tab <- tabPanel(
+  "Bar Graph",
+  fluidPage(
+    titlePanel("Top 10 Causes of Death in the US"),
+  
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(
+        inputId = "Year",
+        label = "Years",
+        min = 1999,
+        max = 2017,
+        value = 2017
+      )
+    ),
+    mainPanel(
+      plotlyOutput("bargraph_plot")
+    )
   )
-)
-
+))
 
 conclusion_tab <- tabPanel(
   "Conclusion",
@@ -90,6 +109,6 @@ ui <- navbarPage(
   intro_tab,
   viz_map_tab,
   viz_death_rates_tab,
-  #viz_death_categories_tab,
+  viz_death_categories_tab,
   conclusion_tab
 )

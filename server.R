@@ -68,4 +68,23 @@ server <- function(input, output) {
     return(line_plot(deaths, input$obs))
   })
   
+  output$bargraph_plot <- renderPlotly({
+   
+     # Filter for top causes
+    bardata_new <- deaths%>%
+      filter(Year == input$Year)%>%
+      filter(State == "United States")%>%
+      filter(Cause.Name != "All causes")
+    
+    bargraph_plot <- ggplot(bardata_new,aes(x=`Cause.Name`, y= Deaths, fill= `Cause.Name`)) +
+      geom_bar(stat = "identity") +
+      labs(title = "Top 10 Leading Causes of Deaths in the US" ,
+           x = "Cause of Death",
+           y = "Number of Deaths") +
+      scale_y_continuous(labels = function(x) format(x, scientific = FALSE))+
+      theme(axis.text.x = element_text(size = 8, angle = 90, hjust = .5))
+    
+    return(ggplotly(bargraph_plot))
+  })
+  
 }
