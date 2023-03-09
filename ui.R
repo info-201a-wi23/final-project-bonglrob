@@ -46,8 +46,6 @@ viz_map_tab <- tabPanel(
       p("This visualization shows a map of the United States and the leading cause of death for each state of that particular year. Leading cause of death is calculated by most deaths for a disease in the year. The purpose of this map is to showcase if there is any correlation of certain regions of the United States that are known for a certain type of death."),
       h2("Key Insights"),
       p("At a first glance, heart disease and cancer are the main causes of death as other causes of death cannot top the number of cases these 2 have. Dominantly, heart disease tops the chart. Washington state consistently has their main cause of death be cancer. One possible reason for this is that due to Fred Hutchinson Cancer Research Center being located there."),
-      
-      
     )
   )
 ))
