@@ -26,7 +26,7 @@ viz_map_tab <- tabPanel(
     sidebarLayout(
       sidebarPanel(
         sliderInput(
-          inputId = "range",
+          inputId = "year",
           label = "Years",
           min = 1999,
           max = 2017,
