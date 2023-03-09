@@ -3,6 +3,11 @@ library("ggplot2")
 library("plotly")
 library("tidyverse")
 library("markdown")
+library("bslib")
+
+
+# Source files
+source("rates_analysis.R")
 
 # Load data
 deaths <- read.csv("us-deaths.csv", stringsAsFactors = FALSE)
@@ -45,7 +50,8 @@ server <- function(input, output) {
         x = long,
         y = lat,
         group = group,
-        fill = Cause.Name
+        fill = Cause.Name,
+        text = paste(region, ":", Deaths, "Deaths")
       ), color = "black") +
       scale_fill_brewer(palette = "Reds") +
       coord_map() +
@@ -55,38 +61,11 @@ server <- function(input, output) {
       blank_theme
     
     
-    return(ggplotly(map_plot))
+    return(ggplotly(map_plot, tooltip=c("text")))
   })
   
   output$line_plot <- renderPlotly({
-    
-    death_rates_2017 <- deaths %>%
-      filter(Year == input$range) %>%
-      filter(State == "United States") %>%
-      filter(Cause.Name != "All causes") %>% 
-      select(Cause.Name, Age.adjusted.Death.Rate)
-    
-    # Select the top 3 causes of death
-    top_3_causes <- death_rates_2017 %>%
-      arrange(desc(Age.adjusted.Death.Rate)) %>%
-      slice_head(n = 3) %>%
-      pull(Cause.Name)
-    
-    # Filter the data for the top 3 causes of death
-    top_3_death_rates <- deaths %>%
-      filter(Cause.Name %in% top_3_causes) %>% 
-      filter(State == "United States")
-    
-    # Create the line graph
-    line_plot <- ggplot(top_3_death_rates, aes(x = Year, y = Age.adjusted.Death.Rate, color = Cause.Name)) +
-      geom_line() +
-      labs(title = "Age-Adjusted Death Rates for Top 3 Leading Causes of Death in the US",
-           x = "Year",
-           y = "Death Rate (per 100,000 population)") +
-      scale_y_continuous(labels = scales::comma_format()) +
-      theme_bw()
-    
-    return(ggplotly(line_plot))
+    return(line_plot(deaths, input$obs))
   })
   
   output$bargraph_plot <- renderPlotly({

@@ -1,11 +1,31 @@
- ## Introduction
+![heart](https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+## Introduction
 
 What major questions are you seeking to answer? 
 
-What data are you using to answer those questions? 
+Our main question is how the causes of death relate to the particular area that the death occurs in. This question is important because it gives us insight into problems within these regions that can be focused on to improve the future of public health.
 
-Please provide a URL link to the original source(s) of the data. 
+"The government spends more than $1 trillion on health per year" (USAFacts). The US government has a vested interest in the public health sector. This means gathering insights and understanding of the death rate among different populations can impact policy and funding. If one state has a higher death rate for vehicle accidents, one can conclude that there could be something wrong with transportation and infrastructure or there is a population shift where older populations are moving there. States also implement different health services, so if there is a decrease in suicides for one state over time, there could use a similar policy that other states can consider using.
 
-Where did the data come from, and what are possible ethical questions or limitations to consider with this dataset? 
+Another main question that we seek to answer is what the rates are for the leading causes of death within a given year. It is especially important to understand how these causes may change over time in order to observe patterns within a specific range of years. Like mentioned earlier, this information may give us more insight in order to contribute to a better future for public health.
 
-You should also include some additional "flare" on this landing page, such as an image.
+USAFacts. “Most Common Causes of Death in the US.” USAFacts, USAFacts, 22 Sept. 2020, https://usafacts.org/articles/americans-causes-of-death-by-age-cdc-data/.
+
+## About Dataset
+
+The data was found in data.gov at https://catalog.data.gov/dataset/nchs-leading-causes-of-death-united-states
+This data is collected and made available by The National Center for Health Statistics (NCHS), which is a US government agency and a unit of the Centers for Disease Control and Prevention (CDC).
+
+Data is collected from the death certificates of US residents. Each death certificate identifies the cause of death and the state from which it was filed under. The data was collected to study the US population for the interest of public health. Statistics on death rates and disease can pick out patterns and formulate opinions to adopt relevant policies and health guidelines.
+
+
+## Ethical Questions & Data Limitations
+
+How are populations that are excluded from this data (e.g. undocumented peoples) affected when this data is used to determine policy for health services?
+
+  Since the data is based on death certificates of US citizens, it does not fully represent the population as a whole. There are misfiled death certificates, undocumented residents, and nationals who are living abroad. Fetal deaths are also excluded from the dataset. We can't rely on the data on full confidence, but we can make good guesses on the death rates.
+
+  The death rate is also not an accurate predictor of the number of deaths because it's based on the US Census. Between 1999 and 2010, the 2000 US Census is used to calculate the death rate. After 2010, the 2010 US Census is used instead. The US Census is conducted once every decade, so the data collected will also not be representative of the US population. This runs into the same problem as relying on death certificates for information. As a result, this creates a feedback loop where inaccurate data will be used to compile statistics that will have a big margin of error.
+
+  Another problem with the dataset is that data collected from the death certificate will be based on the main underlying cause of death determined by the practicing medical examiner. Inaccurate diagnosies can make their way into the data and mask the true cause of death. This could lead to conclusions where some deaths are ocurring more than others.

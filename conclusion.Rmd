@@ -2,8 +2,12 @@
 
 Presents **3** *specific takeaways* from the analysis in at least 250 words, tying the project back to the intention set out in the introduction.
 
+In visualizing the map of the United States to discover patterns for leading cause of death per state, there is 2 primary leading causes of death: heart disease and cancer. Throughout the years of 2000 to 2017, Washington state was consistently had a leading cause of death for cancer whereas other states went back and forth. One idea that comes to mind for this pattern is that Washington is known for cancer research and lots of patients move there. I do not believe there is a big enough indication to think that people residing in Washington have a big enough lifestyle change to be different from other states which lead in heart disease. 
+
 Specific takeaways, ideally backed up by a piece of evidence, calculated value, table, or chart that demonstrates the pattern/insight
 
 Discussion of the most important insight or thing you learned from your analysis
 
 Discussion of the broader implications of this insight
+
+The broader implications of this insight include the overall patterns of death in which citizens of the United States are most susceptible to falling under. This is an important aspect of the gathered insight that the audience must consider because it may or may not affect themselves, as well as the people around them. Because of this feat, the information from our project can be especially broad in the sense that many people can benefit from understanding and interpreting our data visualizations. 
