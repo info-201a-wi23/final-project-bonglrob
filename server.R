@@ -4,6 +4,7 @@ library("plotly")
 library("tidyverse")
 library("markdown")
 library("bslib")
+library("maps")
 
 
 # Source files
