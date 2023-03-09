@@ -33,7 +33,7 @@ viz_map_tab <- tabPanel(
         sliderInput(
           inputId = "year",
           label = "Years",
-          min = 1999,
+          min = 2000,
           max = 2017,
           value = 2017
         )
