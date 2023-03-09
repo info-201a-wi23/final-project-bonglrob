@@ -8,6 +8,8 @@ Our main question is how the causes of death relate to the particular area that 
 
 "The government spends more than $1 trillion on health per year" (USAFacts). The US government has a vested interest in the public health sector. This means gathering insights and understanding of the death rate among different populations can impact policy and funding. If one state has a higher death rate for vehicle accidents, one can conclude that there could be something wrong with transportation and infrastructure or there is a population shift where older populations are moving there. States also implement different health services, so if there is a decrease in suicides for one state over time, there could use a similar policy that other states can consider using.
 
+Another main question that we seek to answer is what the rates are for the leading causes of death within a given year. It is especially important to understand how these causes may change over time in order to observe patterns within a specific range of years. Like mentioned earlier, this information may give us more insight in order to contribute to a better future for public health.
+
 USAFacts. “Most Common Causes of Death in the US.” USAFacts, USAFacts, 22 Sept. 2020, https://usafacts.org/articles/americans-causes-of-death-by-age-cdc-data/.
 
 ## About Dataset
