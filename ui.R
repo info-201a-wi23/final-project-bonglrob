@@ -1,3 +1,7 @@
+library(shiny)
+library(plotly)
+
+
 intro_tab <- tabPanel(
   "Introduction",
   fluidPage(
@@ -28,6 +32,28 @@ viz_map_tab <- tabPanel(
   )
 ))
 
+viz_death_rates_tab <- tabPanel(
+  "Line Graph",
+  fluidPage(
+    titlePanel("Age-Adjusted Death Rates for Top 3 Leading Causes of Death in the US"),
+    
+    sidebarLayout(
+      sidebarPanel(
+        sliderInput(
+          inputId = "range",
+          label = "Years",
+          min = 1999,
+          max = 2017,
+          value = 2017
+        )
+      )
+      mainPanel(
+        plotlyOutput("line_plot")
+      )
+    )
+  )
+)
+
 
 conclusion_tab <- tabPanel(
   "Conclusion",
@@ -40,7 +66,7 @@ ui <- navbarPage(
   "US Deaths",
   intro_tab,
   viz_map_tab,
-  #viz_death_rates_tab,
+  viz_death_rates_tab,
   #viz_death_categories_tab,
   conclusion_tab
 )
