@@ -1,13 +1,12 @@
 # Leading Causes of Deaths in US (1999-2017)
 ## INFO 201 "Foundational Skills for Data Science" — Winter 2023
 
-Authors: Robert Bonglamphone, Evelyn, Bianca Flores
+Authors: Robert Bonglamphone, Evelyn Sotelo, Bianca Flores
 
 **Link: Link to your Shiny App here**
 
 # Introduction
 
-What major questions are you seeking to answer? 
 
 What data are you using to answer those questions? 
 
