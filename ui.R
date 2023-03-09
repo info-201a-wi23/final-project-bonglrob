@@ -51,9 +51,28 @@ viz_death_rates_tab <- tabPanel(
         plotlyOutput("line_plot")
       )
     )
+))
+viz_death_categories_tab <- tabPanel(
+  "Bar Graph",
+  fluidPage(
+    titlePanel("Top 10 Causes of Death in the US"),
+  
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(
+        inputId = "Year",
+        label = "Years",
+        min = 1999,
+        max = 2017,
+        value = 2017
+      )
+    ),
+    mainPanel(
+      plotlyOutput("bargraph_plot")
+    )
   )
-)
-
+))
 
 conclusion_tab <- tabPanel(
   "Conclusion",
@@ -67,6 +86,6 @@ ui <- navbarPage(
   intro_tab,
   viz_map_tab,
   viz_death_rates_tab,
-  #viz_death_categories_tab,
+  viz_death_categories_tab,
   conclusion_tab
 )
