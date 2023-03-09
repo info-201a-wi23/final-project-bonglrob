@@ -5,6 +5,7 @@ library("tidyverse")
 library("markdown")
 library("bslib")
 library("maps")
+library("mapproj")
 
 
 # Source files
