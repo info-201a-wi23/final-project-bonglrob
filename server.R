@@ -18,13 +18,11 @@ server <- function(input, output) {
     deaths_state_data <- deaths %>%
       mutate(state_name = tolower(State)) %>%
       filter(state_name != "united states") %>%
-      filter(Year == 2008) %>% # Change to dynamic input/output
+      filter(Year == input$year) %>% # Change to dynamic input/output
       group_by(state_name) %>%
       filter(Cause.Name != "All causes") %>%
       filter(Deaths == max(Deaths, na.rm = TRUE)) %>%
       select(Year, Cause.Name, Deaths, state_name)
-    
-    View(deaths_state_data)
     
     # Join shapefile with deaths data
     state_shape_data <- left_join(state_shape, deaths_state_data, by = c("region" = "state_name"))
