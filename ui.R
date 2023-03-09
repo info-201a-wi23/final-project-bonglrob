@@ -45,7 +45,13 @@ viz_map_tab <- tabPanel(
       h1("About this Map:"),
       p("This visualization shows a map of the United States and the leading cause of death for each state of that particular year. Leading cause of death is calculated by most deaths for a disease in the year. The purpose of this map is to showcase if there is any correlation of certain regions of the United States that are known for a certain type of death."),
       h2("Key Insights"),
-      p("At a first glance, heart disease and cancer are the main causes of death as other causes of death cannot top the number of cases these 2 have. Dominantly, heart disease tops the chart. Washington state consistently has their main cause of death be cancer. One possible reason for this is that due to Fred Hutchinson Cancer Research Center being located there.")
+      p("At a first glance, heart disease and cancer are the main causes of death as other causes of death cannot top the number of cases these 2 have. Dominantly, heart disease tops the chart. Washington state consistently has their main cause of death be cancer. One possible reason for this is that due to Fred Hutchinson Cancer Research Center being located there."),
+      
+      plotlyOutput("line_plot"),
+      h1("About this graph:"),
+      p("This visualization displays the top three leading causes of death and their death rates for any specific year chosen within the given range. The purpose of this map is to show how the death rates for these leading causes may fluctuate over time. This can be useful in considering what may be contributors to these causes, when events of the corresponding years can be tracked back to them."),
+      h2("Key Insights"),
+      p("We are able to see from the line graphs that each of the three leading causes fluctuate throughout the years. In a broader sense, it is less difficult to compare whether or not one leading cause affects the United States population more than another leading cause."),
     )
   )
 ))
