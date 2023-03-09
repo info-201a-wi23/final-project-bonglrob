@@ -1,0 +1,35 @@
+#death rates for the top three categories
+
+library("dplyr")
+library("ggplot2")
+library("plotly")
+library("tidyverse")
+
+deaths <- read.csv("us-deaths.csv")
+
+death_rates_2017 <- deaths %>%
+  filter(Year == 2017) %>%
+  filter(State == "United States") %>%
+  filter(Cause.Name != "All causes") %>% 
+  select(Cause.Name, Age.adjusted.Death.Rate)
+
+# Select the top 3 causes of death
+top_3_causes <- death_rates_2017 %>%
+  arrange(desc(Age.adjusted.Death.Rate)) %>%
+  slice_head(n = 3) %>%
+  pull(Cause.Name)
+
+# Filter the data for the top 3 causes of death
+top_3_death_rates <- deaths %>%
+  filter(Cause.Name %in% top_3_causes) %>% 
+  filter(State == "United States")
+
+# Create the line graph
+ggplot(top_3_death_rates, aes(x = Year, y = Age.adjusted.Death.Rate, color = Cause.Name)) +
+  geom_line() +
+  labs(title = "Age-Adjusted Death Rates for Top 3 Leading Causes of Death in the US",
+       x = "Year",
+       y = "Death Rate (per 100,000 population)") +
+  scale_y_continuous(labels = scales::comma_format()) +
+  theme_bw()
+
