@@ -4,7 +4,6 @@ library("plotly")
 library("tidyverse")
 library("markdown")
 library("bslib")
-library("DT")
 
 
 # Source files
