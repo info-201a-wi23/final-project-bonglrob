@@ -3,6 +3,9 @@ library("ggplot2")
 library("plotly")
 library("tidyverse")
 library("markdown")
+library("bslib")
+library("DT")
+
 
 # Load data
 deaths <- read.csv("us-deaths.csv", stringsAsFactors = FALSE)
@@ -45,7 +48,8 @@ server <- function(input, output) {
         x = long,
         y = lat,
         group = group,
-        fill = Cause.Name
+        fill = Cause.Name,
+        text = paste(region, ":", Deaths, "Deaths")
       ), color = "black") +
       scale_fill_brewer(palette = "Reds") +
       coord_map() +
@@ -55,7 +59,7 @@ server <- function(input, output) {
       blank_theme
     
     
-    return(ggplotly(map_plot))
+    return(ggplotly(map_plot, tooltip=c("text")))
   })
   
   output$line_plot <- renderPlotly({

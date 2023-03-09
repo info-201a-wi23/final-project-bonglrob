@@ -1,6 +1,11 @@
 library(shiny)
 library(plotly)
 
+my_theme <- bs_theme(
+  bg = "#cfe2f3",
+  fg = "#191919",
+  primary = "white"
+)
 
 intro_tab <- tabPanel(
   "Introduction",
@@ -63,6 +68,7 @@ conclusion_tab <- tabPanel(
 )
 
 ui <- navbarPage(
+  theme = my_theme,
   "US Deaths",
   intro_tab,
   viz_map_tab,
