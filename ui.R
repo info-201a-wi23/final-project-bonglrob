@@ -1,5 +1,7 @@
 library(shiny)
 library(plotly)
+library(bslib)
+library(httr)
 
 my_theme <- bs_theme(
   bg = "#cfe2f3",
